@@ -1,3 +1,3 @@
 const { projects, clients } = require('../sampleData.js');
 
-const graphiql = require('graphql');
+const { GraphQLObjectType } = require('graphql');
