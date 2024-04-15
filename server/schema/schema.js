@@ -20,8 +20,10 @@ const RootQuery = new GraphQLObjectType({
       type: ClientType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        return clients.find((client) => client.id === args.client.id);
+        return clients.find((client) => client.id === args.id);
       },
     },
   },
 });
+
+module.exports = new GraphOLSchema({});
