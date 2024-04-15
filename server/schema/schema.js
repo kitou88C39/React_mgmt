@@ -1,7 +1,12 @@
 const { query } = require('express');
 const { projects, clients } = require('../sampleData.js');
 
-const { GraphQLObjectType, GraphQLID, GraphQLString } = require('graphql');
+const {
+  GraphQLObjectType,
+  GraphQLID,
+  GraphQLString,
+  GraphOLSchema,
+} = require('graphql');
 
 //Client Type
 const ClientType = new GraphQLObjectType({
