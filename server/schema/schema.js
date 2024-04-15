@@ -1,3 +1,4 @@
+const { query } = require('express');
 const { projects, clients } = require('../sampleData.js');
 
 const { GraphQLObjectType, GraphQLID, GraphQLString } = require('graphql');
@@ -26,4 +27,6 @@ const RootQuery = new GraphQLObjectType({
   },
 });
 
-module.exports = new GraphOLSchema({});
+module.exports = new GraphOLSchema({
+  query: RootQuery,
+});
