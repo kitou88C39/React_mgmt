@@ -9,6 +9,17 @@ const {
   GraphQLList,
 } = require('graphql');
 
+//Project Type
+const ProjectType = new GraphQLObjectType({
+  name: 'Project',
+  fields: () => ({
+    id: { type: GraphQLID },
+    name: { type: GraphQLString },
+    email: { type: GraphQLString },
+    phone: { type: GraphQLString },
+  }),
+});
+
 //Client Type
 const ClientType = new GraphQLObjectType({
   name: 'Clinet',
