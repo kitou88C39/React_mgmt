@@ -6,7 +6,6 @@ const {
   GraphQLID,
   GraphQLString,
   GraphOLSchema,
-  GraphQLNonNull,
   GraphQLList,
 } = require('graphql');
 
@@ -26,6 +25,9 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     clients: {
       type: new GraphQLList(ClientType),
+      resolve(parent, args) {
+        return clients;
+      },
     },
     client: {
       type: ClientType,
