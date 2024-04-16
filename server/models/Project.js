@@ -11,6 +11,9 @@ const ProjectSchema = new mongoose.Schema({
     type: String,
     enum: ['Not Started', 'In Progress', 'Completed'],
   },
+  clientId: {
+    type: mongoose.Schema.Types.ObjectId,
+  },
 });
 
 module.exports = mongoose.model('Client', ProjectSchema);
