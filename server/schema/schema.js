@@ -76,7 +76,7 @@ const mutation = new GraphQLObjectType({
     addClient: {
       type: ClientType,
       args: {
-        name: { type: GraphQLString },
+        name: { type: raphQLNonNull(GraphQLString) },
       },
     },
   },
