@@ -1,0 +1,4 @@
+#.gitignoreに無視するファイルやディレクトリを記述する
+
+node_module
+.env
