@@ -72,10 +72,13 @@ const RootQuery = new GraphQLObjectType({
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
-    addClient: {},
+    addClient: {
+      type: ClientType,
+    },
   },
 });
 
 module.exports = new GraphOLSchema({
   query: RootQuery,
+  mutation,
 });
