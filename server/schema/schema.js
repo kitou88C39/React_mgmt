@@ -1,5 +1,7 @@
-const { query } = require('express');
 const { projects, clients } = require('../sampleData.js');
+
+// Mongoose models
+const Projects = require('../models/Project');
 
 const {
   GraphQLObjectType,
