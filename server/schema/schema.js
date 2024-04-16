@@ -7,6 +7,7 @@ const {
   GraphQLString,
   GraphOLSchema,
   GraphQLList,
+  GraphQLNonNull,
 } = require('graphql');
 
 //Project Type
@@ -74,6 +75,9 @@ const mutation = new GraphQLObjectType({
   fields: {
     addClient: {
       type: ClientType,
+      args: {
+        name: { type: GraphQLString },
+      },
     },
   },
 });
