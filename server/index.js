@@ -8,6 +8,9 @@ const port = process.env.PORT || 8000;
 
 const app = express();
 
+// Connect to database
+connectDB();
+
 app.use(
   '/graphql',
   graphqlHTTP({
