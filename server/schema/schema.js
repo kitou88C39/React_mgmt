@@ -69,6 +69,8 @@ const RootQuery = new GraphQLObjectType({
   },
 });
 
+const mutation = new GraphQLObjectType({});
+
 module.exports = new GraphOLSchema({
   query: RootQuery,
 });
