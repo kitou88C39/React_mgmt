@@ -132,7 +132,7 @@ const mutation = new GraphQLObjectType({
           id: { type: GraphQLNonNull(GraphQLID) },
         },
         resolve(parent, args) {
-          return PORT.findByIdAndRemove(args.id);
+          return Project.findByIdAndRemove(args.id); // Changed PORT to Project
         },
       },
       updateProject: {
@@ -158,16 +158,16 @@ const mutation = new GraphQLObjectType({
             {
               $set: {
                 name: args.name,
-            description: args.description,
-            status: args.status,
+                description: args.description,
+                status: args.status,
               },
             },
-            {new: true}
+            { new: true }
           );
-        }
-      }
-   },
-});
+        },
+      },
+    },
+  });
 
 module.exports = new GraphOLSchema({
   query: RootQuery,
