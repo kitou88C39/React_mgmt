@@ -131,6 +131,9 @@ const mutation = new GraphQLObjectType({
         args: {
           id: { type: GraphQLNonNull(GraphQLID) },
         },
+        resolve(parent, args) {
+          return PORT.findByIdAndRemove(args.id);
+        },
       },
     },
   },
