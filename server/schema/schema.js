@@ -140,7 +140,20 @@ const mutation = new GraphQLObjectType({
         args: {
           id: { type: GraphQLNonNull(GraphQLID) },
           name: { type: GraphQLString},
-  },
+          description: { type: GraphQLString},
+          tatus: {
+            type: new GraphQLEnumType({
+              name: 'ProjectStatus',
+              values: {
+                new: { value: 'Not Started' },
+                progress: { value: 'In Progress' },
+                Completed: { value: 'Completed' },
+              },
+            }),
+          },
+        }
+      }
+   },
 });
 
 module.exports = new GraphOLSchema({
