@@ -116,6 +116,15 @@ const mutation = new GraphQLObjectType({
           },
           clientId: { type: GraphQLNonNull(GraphQLID) },
         },
+        resolve(parent, args) {
+          const project = new Project({
+            name: args.name,
+            description: args.description,
+            status: args.status,
+            clientId: args.clientId,
+          });
+          return client.save();
+        },
       },
     },
   },
