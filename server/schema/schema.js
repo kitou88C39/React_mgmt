@@ -135,7 +135,11 @@ const mutation = new GraphQLObjectType({
           return PORT.findByIdAndRemove(args.id);
         },
       },
-    },
+      updateProject: {
+        type: ProjectType,
+        args: {
+          id: { type: GraphQLNonNull(GraphQLID) },
+          name: { type: GraphQLString},
   },
 });
 
