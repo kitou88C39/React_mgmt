@@ -143,7 +143,7 @@ const mutation = new GraphQLObjectType({
           description: { type: GraphQLString},
           tatus: {
             type: new GraphQLEnumType({
-              name: 'ProjectStatus',
+              name: 'ProjectStatusUpdate',
               values: {
                 new: { value: 'Not Started' },
                 progress: { value: 'In Progress' },
@@ -151,6 +151,19 @@ const mutation = new GraphQLObjectType({
               },
             }),
           },
+        },
+        resolve(parent, args){
+          return Project.findByIdAndUpdate(
+            args.id,
+            {
+              $set: {
+                name: args.name,
+            description: args.description,
+            status: args.status,
+              },
+            },
+            {new: true}
+          );
         }
       }
    },
