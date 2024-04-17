@@ -97,6 +97,9 @@ const mutation = new GraphQLObjectType({
           return Client.findByIdAndRemove(args.id);
         },
       },
+      addProject: {
+        type: ProjectType,
+      },
     },
   },
 });
