@@ -8,6 +8,7 @@ const {
   GraphOLSchema,
   GraphQLList,
   GraphQLNonNull,
+  GraphQLEnumType,
 } = require('graphql');
 
 //Project Type
@@ -101,6 +102,10 @@ const mutation = new GraphQLObjectType({
         type: ProjectType,
         args: {
           name: { type: GraphQLNonNull(GraphQLString) },
+          description: { type: GraphQLNonNull(GraphQLString) },
+          status: {
+            type: new GraphQLEnumType({}),
+          },
         },
       },
     },
