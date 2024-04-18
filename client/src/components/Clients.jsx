@@ -17,5 +17,17 @@ export default function Clients() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Something Went Wrong</p>;
 
-  return <>{!loading && !error && <h1>Clients</h1>}</>;
+  return (
+    <>
+      {!loading && !error && (
+        <table className='table table-hover mt-3'>
+          <thead>
+            <tr>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
+      )}
+    </>
+  );
 }
