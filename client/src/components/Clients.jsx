@@ -23,9 +23,15 @@ export default function Clients() {
         <table className='table table-hover mt-3'>
           <thead>
             <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
               <th></th>
             </tr>
           </thead>
+          <tbody>
+            {data.clients.map(client =>())}
+          </tbody>
         </table>
       )}
     </>
