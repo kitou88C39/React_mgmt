@@ -1,4 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
+// Import the missing 'ClientRow' component at the top of the file where other imports are
+import ClientRow from './ClientRow';
 
 const GET_CLIENTS = gql`
   query getClients {
@@ -30,7 +32,9 @@ export default function Clients() {
             </tr>
           </thead>
           <tbody>
-            {data.clients.map(client =>())}
+            {data.clients.map((client) => (
+              <ClientRow key={client.id} client={client} />
+            ))}
           </tbody>
         </table>
       )}
