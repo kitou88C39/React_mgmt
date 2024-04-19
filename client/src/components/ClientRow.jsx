@@ -1,5 +1,3 @@
-import React from 'react';
-
-export default function ClientRow() {
-  return <div>ClientRow</div>;
+export default function ClientRow(client) {
+  return <tr></tr>;
 }
