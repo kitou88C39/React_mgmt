@@ -13,7 +13,7 @@ export default function ClientRow(client) {
       <td>{client.email}</td>
       <td>{client.phone}</td>
       <td>
-        <button className='btn btn-danger btn-sm'>
+        <button className='btn btn-danger btn-sm' onClick={deleteClient}>
           <FaTrash />
         </button>
       </td>
