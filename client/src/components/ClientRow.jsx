@@ -8,6 +8,7 @@ export default function ClientRow(client) {
   const [deleteClient] = useMutation(DELETE_CLIENTS, {
     variables: { id: client.id },
     refetchQueries: [[(query: GET_CLIENTS)],
+    
   });
 
   return (
