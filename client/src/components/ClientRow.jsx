@@ -3,7 +3,10 @@ import { useMutation } from '@apollo/client';
 import { DELETE_CLIENTS } from '../mutations/clientMutations';
 
 export default function ClientRow(client) {
-  const [deleteClient] = useMutation(DELETE_CLIENTS);
+  const [deleteClient] = useMutation(DELETE_CLIENTS, {
+    variables: { id: client.id },
+  });
+
   return (
     <tr>
       <td>{client.name}</td>
