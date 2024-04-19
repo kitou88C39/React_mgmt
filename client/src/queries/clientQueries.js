@@ -1,3 +1,5 @@
+import { gql } from '@apollo/client';
+
 const GET_CLIENTS = gql`
   query getClients {
     clients {
@@ -8,3 +10,5 @@ const GET_CLIENTS = gql`
     }
   }
 `;
+
+export { GET_CLIENTS };
