@@ -10,3 +10,5 @@ const DELETE_CLIENTS = gql`
         }
     }
 `;
+
+export { DELETE_CLIENTS };
