@@ -1,5 +1,12 @@
-import React from 'react';
+import { gql } from '@apollo/client';
 
-export default function clientMutations() {
-  return <div>clientMutations</div>;
-}
+const DELETE_CLIENTS = gql`
+//   query getClients {
+//     clients {
+//       id
+//       name
+//       email
+//       phone
+//     }
+//   }
+`;
