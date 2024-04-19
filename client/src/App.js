@@ -7,7 +7,14 @@ const cache = new InMemoryCache({
     Query: {
       fields: {
         clients: {
-          merge(existing, incoming) {},
+          merge(existing, incoming) {
+            return incoming;
+          },
+        },
+        projects: {
+          merge(existing, incoming) {
+            return incoming;
+          },
         },
       },
     },
