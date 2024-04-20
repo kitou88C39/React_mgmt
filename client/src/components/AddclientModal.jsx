@@ -19,14 +19,17 @@ export default function AddclientModal() {
 
       cache.writeQuery({
         query: GET_CLIENTS,
-        data: { clients: clients.concat([addClient]) },
+        data: { clients: [...clients, addClient] },
       });
     },
   });
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, phone);
+
+    if (name === '' || email === '' || phone === '') {
+      return;
+    }
   };
 
   return (
