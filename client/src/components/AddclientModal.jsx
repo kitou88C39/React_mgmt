@@ -9,6 +9,7 @@ export default function AddclientModal() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    console.log(name, email, phone);
   };
 
   return (
