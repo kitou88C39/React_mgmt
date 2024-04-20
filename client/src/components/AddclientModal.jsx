@@ -37,7 +37,14 @@ export default function AddclientModal() {
               ></button>
             </div>
             <div className='modal-body'>
-              <from></from>
+              <from>
+                <div className='mb-3'>
+                  <label className='form-label'>
+                    Name
+                    <input type='text' className='from-control' />
+                  </label>
+                </div>
+              </from>
             </div>
           </div>
         </div>
