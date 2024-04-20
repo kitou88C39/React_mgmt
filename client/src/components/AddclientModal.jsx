@@ -28,8 +28,9 @@ export default function AddclientModal() {
     e.preventDefault();
 
     if (name === '' || email === '' || phone === '') {
-      return;
+      return alert('Please fill in all fields');
     }
+    addClient(name, email, phone);
   };
 
   return (
