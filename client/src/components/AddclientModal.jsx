@@ -62,7 +62,7 @@ export default function AddclientModal() {
                       className='from-control'
                       id='email'
                       value={email}
-                      onChange={(e) => setName(e.target.value)}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </label>
                 </div>
@@ -74,10 +74,13 @@ export default function AddclientModal() {
                       className='from-control'
                       id='phone'
                       value={phone}
-                      onChange={(e) => setName(e.target.value)}
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </label>
                 </div>
+                <button type='submit' className='btn btn-secondary'>
+                  Submit
+                </button>
               </from>
             </div>
           </div>
