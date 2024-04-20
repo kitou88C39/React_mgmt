@@ -49,7 +49,7 @@ export default function AddclientModal() {
         aria-labelledby='AddClientModalLabel'
         aria-hidden='true'
       >
-        <div className='modal-dialog' role='document'>
+        <div className='modal-dialog'>
           <div className='modal-content'>
             <div className='modal-header'>
               <h5 className='modal-title' id='AddClientModalLabel'>
