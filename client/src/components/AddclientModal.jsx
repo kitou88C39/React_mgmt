@@ -34,11 +34,11 @@ export default function AddclientModal() {
                 className='close'
                 data-dismiss='modal'
                 aria-label='Close'
-              >
-                <span aria-hidden='true'>&times;</span>
-              </button>
+              ></button>
             </div>
-            <div className='modal-body'>...</div>
+            <div className='modal-body'>
+              <from></from>
+            </div>
           </div>
         </div>
       </div>
