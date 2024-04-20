@@ -1,5 +1,14 @@
-import React from 'react';
+import { gql } from '@apollo/client';
 
-export default function projectQueries() {
-  return <div>projectQueries</div>;
-}
+const GET_PROJECTS = gql`
+  query getProjects {
+    projectss {
+      id
+      name
+      email
+      phone
+    }
+  }
+`;
+
+export { GET_PROJECTS };
