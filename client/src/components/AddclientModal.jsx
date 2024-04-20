@@ -54,6 +54,18 @@ export default function AddclientModal() {
                     />
                   </label>
                 </div>
+                <div className='mb-3'>
+                  <label className='form-label'>
+                    Name
+                    <input
+                      type='text'
+                      className='from-control'
+                      id='name'
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </label>
+                </div>
               </from>
             </div>
           </div>
