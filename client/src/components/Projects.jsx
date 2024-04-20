@@ -7,12 +7,16 @@ export default function Projects() {
   if (loading) return <Spinner />;
   if (error) return <p>Something Went Wrong</p>;
 
-  return;
+  return (
   <>
     {data.projects.length > 0 ? (
-      <div className='row'></div>
+      <div className='row'>
+        {data.projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+      </div>
     ) : (
       <p>NO PROJECTS</p>
     )}
   </>;
+  )
 }
