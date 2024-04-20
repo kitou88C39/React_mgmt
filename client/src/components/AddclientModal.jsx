@@ -7,24 +7,27 @@ export default function AddclientModal() {
     <>
       <button
         type='button'
-        className='btn btn-primary'
+        className='btn btn-secondary'
         data-toggle='modal'
-        data-target='#exampleModal'
+        data-target='AddClientModal'
       >
-        Launch demo modal
+        <div className='d-flex align-items-center'>
+          <FaUser className='icon' />
+          <div>Add Client</div>
+        </div>
       </button>
 
       <div
         className='modal fade'
         id='exampleModal'
-        aria-labelledby='exampleModalLabel'
+        aria-labelledby='AddClientModalLabel'
         aria-hidden='true'
       >
         <div className='modal-dialog' role='document'>
           <div className='modal-content'>
             <div className='modal-header'>
-              <h5 className='modal-title' id='exampleModalLabel'>
-                Modal title
+              <h5 className='modal-title' id='AddClientModalLabel'>
+                Add Client
               </h5>
               <button
                 type='button'
@@ -36,18 +39,6 @@ export default function AddclientModal() {
               </button>
             </div>
             <div className='modal-body'>...</div>
-            <div className='modal-footer'>
-              <button
-                type='button'
-                className='btn btn-secondary'
-                data-dismiss='modal'
-              >
-                Close
-              </button>
-              <button type='button' className='btn btn-primary'>
-                Save changes
-              </button>
-            </div>
           </div>
         </div>
       </div>
