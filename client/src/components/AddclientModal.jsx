@@ -46,7 +46,7 @@ export default function AddclientModal() {
                   <label className='form-label'>
                     Name
                     <input
-                      type='text'
+                      type='name'
                       className='from-control'
                       id='name'
                       value={name}
@@ -56,12 +56,24 @@ export default function AddclientModal() {
                 </div>
                 <div className='mb-3'>
                   <label className='form-label'>
-                    Name
+                    Email
                     <input
-                      type='text'
+                      type='email'
                       className='from-control'
-                      id='name'
-                      value={name}
+                      id='email'
+                      value={email}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </label>
+                </div>
+                <div className='mb-3'>
+                  <label className='form-label'>
+                    Phone
+                    <input
+                      type='phone'
+                      className='from-control'
+                      id='phone'
+                      value={phone}
                       onChange={(e) => setName(e.target.value)}
                     />
                   </label>
