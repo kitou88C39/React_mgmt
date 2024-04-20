@@ -3,6 +3,10 @@ import { FaUser } from 'react-icons/fa';
 import { useMutation } from '@apollo/client';
 
 export default function AddclientModal() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [balance, setBalance] = useState('');
+
   return (
     <>
       <button
@@ -41,7 +45,7 @@ export default function AddclientModal() {
                 <div className='mb-3'>
                   <label className='form-label'>
                     Name
-                    <input type='text' className='from-control' />
+                    <input type='text' className='from-control' id='name' />
                   </label>
                 </div>
               </from>
