@@ -31,6 +31,9 @@ export default function AddclientModal() {
       return alert('Please fill in all fields');
     }
     addClient(name, email, phone);
+    setName('');
+    setEmail('');
+    setPhone('');
   };
 
   return (
