@@ -102,6 +102,11 @@ export default function AddProjectModal() {
                         <option value='completed'>Completed</option>
                       </select>
                     </div>
+                    <div className='mb-3'>
+                      <label className='from-label'>Client</label>
+                      <select id='client' className='form-select'></select>
+                    </div>
+
                     <button
                       type='submit'
                       data-bs-dismiss='modal'
