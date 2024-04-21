@@ -26,6 +26,9 @@ export default function AddProjectModal() {
     setClientId('');
   };
 
+  if (loading) return null;
+  if (error) return `Something Went Wrong`;
+
   return (
     <>
       <button
