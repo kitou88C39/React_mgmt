@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { FaUser } from 'react-icons/fa';
-import { useMutation } from '@apollo/client';
-import { ADD_CLIENT } from '../mutations/clientMutations';
-import { GET_CLIENTS } from '../queries/clientQueries';
+import { FaList } from 'react-icons/fa';
+import { useMutation, useQuery } from '@apollo/client';
+import { GET_PROJECTS } from '../queries/projectQueries';
 
-export default function AddclientModal() {
+export default function AddProjectModal() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
