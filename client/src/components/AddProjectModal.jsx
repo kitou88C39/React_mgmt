@@ -12,13 +12,14 @@ export default function AddProjectModal() {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (name === '' || email === '' || phone === '') {
+    if (name === '' || description === '' || status === '') {
       return alert('Please fill in all fields');
     }
-    addClient(name, email, phone);
+
     setName('');
-    setEmail('');
-    setPhone('');
+    setDescription('');
+    setStatus('new');
+    setClientId('');
   };
 
   return (
