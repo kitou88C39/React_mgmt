@@ -21,6 +21,7 @@ export default function Project() {
           <p>{data.project.description}</p>
           <h5 className='mt-3'>Project Status</h5>
           <p className='lead'>{data.project.status}</p>
+          <ClientInfo client={data.project.client} />
         </div>
       )}
     </>
