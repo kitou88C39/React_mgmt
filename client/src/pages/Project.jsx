@@ -4,5 +4,11 @@ import { useQuery } from '@apollo/client';
 import { GET_PROJECT } from '../queries/projectQueries';
 
 export default function Project() {
+  const { id } = useParams();
+  const { loading, error, data } = useQuery(GET_PROJECT, { variables: { id } });
+
+  if (loading) return <Spinner />;
+  if (error) return <p>Something Went Wrong</p>;
+
   return <div>Project</div>;
 }
