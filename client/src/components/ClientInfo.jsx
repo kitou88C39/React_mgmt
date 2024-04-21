@@ -15,8 +15,8 @@ export default function ClientInfo({ client }) {
             {client.email}
           </li>
           <li className='list-group-item'>
-            <FaIdBadge className='icon' />
-            {client.name}
+            <FaPhone className='icon' />
+            {client.phone}
           </li>
         </ul>
       </h5>
