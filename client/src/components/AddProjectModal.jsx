@@ -94,16 +94,13 @@ export default function AddProjectModal() {
                   </label>
                 </div>
                 <div className='mb-3'>
-                  <label className='form-label'>
-                    Phone
-                    <input
-                      type='phone'
-                      className='from-control'
-                      id='phone'
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                    />
-                  </label>
+                  <label className='form-label'>Stutas</label>
+                  <select
+                    id='status'
+                    className='from-select'
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value)}
+                  ></select>
                 </div>
                 <button
                   type='submit'
