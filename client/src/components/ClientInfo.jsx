@@ -11,8 +11,8 @@ export default function ClientInfo({ client }) {
             {client.name}
           </li>
           <li className='list-group-item'>
-            <FaIdBadge className='icon' />
-            {client.name}
+            <FaEnvelope className='icon' />
+            {client.email}
           </li>
           <li className='list-group-item'>
             <FaIdBadge className='icon' />
