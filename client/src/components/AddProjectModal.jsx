@@ -2,12 +2,16 @@ import { useState } from 'react';
 import { FaList } from 'react-icons/fa';
 import { useMutation, useQuery } from '@apollo/client';
 import { GET_PROJECTS } from '../queries/projectQueries';
+import { GET_CLIENTS } from '../queries/clientQueries';
 
 export default function AddProjectModal() {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [clientId, setClientId] = useState('');
   const [status, setStatus] = useState('new');
+
+  // Get Clients for select
+  const { loading, error, data } = useQuery(GET_PROJECTS);
 
   const onSubmit = (e) => {
     e.preventDefault();
