@@ -100,7 +100,11 @@ export default function AddProjectModal() {
                     className='from-select'
                     value={status}
                     onChange={(e) => setStatus(e.target.value)}
-                  ></select>
+                  >
+                    <option value='new'>Not Started</option>
+                    <option value='progress'>In Progress</option>
+                    <option value='completed'>Completed</option>
+                  </select>
                 </div>
                 <button
                   type='submit'
