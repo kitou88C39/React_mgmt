@@ -9,20 +9,6 @@ export default function AddProjectModal() {
   const [clientId, setClientId] = useState('');
   const [status, setStatus] = useState('new');
 
-  const [addClient] = useMutation(ADD_CLIENT, {
-    variables: { name, email, phone },
-    update(cache, { data: { addClient } }) {
-      const { clients } = cache.readQuery({
-        query: GET_CLIENTS,
-      });
-
-      cache.writeQuery({
-        query: GET_CLIENTS,
-        data: { clients: [...clients, addClient] },
-      });
-    },
-  });
-
   const onSubmit = (e) => {
     e.preventDefault();
 
