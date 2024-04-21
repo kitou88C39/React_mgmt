@@ -104,7 +104,19 @@ export default function AddProjectModal() {
                     </div>
                     <div className='mb-3'>
                       <label className='from-label'>Client</label>
-                      <select id='client' className='form-select'></select>
+                      <select
+                        id='clientId'
+                        className='form-select'
+                        value={clientId}
+                        onChange={(e) => setClientId(e.target.value)}
+                      >
+                        <option value=''>Select Client</option>
+                        {data.clients.map((client) => (
+                          <option key={client.id} value={client.id}>
+                            {client.name}
+                          </option>
+                        ))}
+                      </select>
                     </div>
 
                     <button
