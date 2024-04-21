@@ -109,7 +109,7 @@ export default function AddProjectModal() {
                 <button
                   type='submit'
                   data-bs-dismiss='modal'
-                  className='btn btn-secondary'
+                  className='btn btn-primary'
                 >
                   Submit
                 </button>
