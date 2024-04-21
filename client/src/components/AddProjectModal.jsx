@@ -7,7 +7,7 @@ export default function AddProjectModal() {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [clientId, setClientId] = useState('');
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState('new');
 
   const [addClient] = useMutation(ADD_CLIENT, {
     variables: { name, email, phone },
@@ -39,27 +39,27 @@ export default function AddProjectModal() {
     <>
       <button
         type='button'
-        className='btn btn-secondary'
+        className='btn btn-primary'
         data-toggle='modal'
-        data-target='#addClientModal'
+        data-target='#addProjectModal'
       >
         <div className='d-flex align-items-center'>
-          <FaUser className='icon' />
-          <div>Add Client</div>
+          <FaList className='icon' />
+          <div>New Priject</div>
         </div>
       </button>
 
       <div
         className='modal fade'
         id='exampleModal'
-        aria-labelledby='AddClientModalLabel'
+        aria-labelledby='AddProjectModalLabel'
         aria-hidden='true'
       >
         <div className='modal-dialog'>
           <div className='modal-content'>
             <div className='modal-header'>
-              <h5 className='modal-title' id='AddClientModalLabel'>
-                Add Client
+              <h5 className='modal-title' id='AddProjectModalLabel'>
+                New Project
               </h5>
               <button
                 type='button'
@@ -84,14 +84,13 @@ export default function AddProjectModal() {
                 </div>
                 <div className='mb-3'>
                   <label className='form-label'>
-                    Email
-                    <input
-                      type='email'
+                    Description
+                    <textarea
                       className='from-control'
-                      id='email'
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
+                      id='description'
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
+                    ></textarea>
                   </label>
                 </div>
                 <div className='mb-3'>
