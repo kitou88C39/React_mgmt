@@ -5,8 +5,9 @@ import { GET_PROJECTS } from '../queries/projectQueries';
 
 export default function AddProjectModal() {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [description, setDescription] = useState('');
+  const [clientId, setClientId] = useState('');
+  const [status, setStatus] = useState('');
 
   const [addClient] = useMutation(ADD_CLIENT, {
     variables: { name, email, phone },
