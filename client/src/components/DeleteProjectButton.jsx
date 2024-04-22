@@ -8,6 +8,8 @@ export default function DeleteProjectButton({ projectId }) {
   const navigate = useNavigate();
   const [deleteProject] = useMutation(DELETE_PROJECT, {
     variables: { id: projectId },
+    onCompleted: () => navigate('/'),
+    refetchQueries: [{ query: GET_PROJECTS }],
   });
   return (
     <div className='d-flex mt-5 ms-auto'>
