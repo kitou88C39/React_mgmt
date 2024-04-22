@@ -3,9 +3,10 @@ import { useMutation } from '@apollo/client';
 import { GET_PROJECT } from '../queries/projectQueries';
 
 export default function EditProjectForm({ project }) {
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
+  const [name, setName] = useState(project.name);
+  const [description, setDescription] = useState(project.description);
   const [status, setStatus] = useState('new');
+
   return (
     <div className='mt-5'>
       <h3>Update Project Details</h3>
@@ -47,6 +48,13 @@ export default function EditProjectForm({ project }) {
             <option value='completed'>Completed</option>
           </select>
         </div>
+        <button
+          type='submit'
+          data-bs-dismiss='modal'
+          className='btn btn-secondary'
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
