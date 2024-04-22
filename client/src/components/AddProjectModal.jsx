@@ -15,6 +15,10 @@ export default function AddClientModal() {
     variables: { name, description, clientId, status },
     update(cache, { data: { addProject } }) {
       const { projects } = cache.readQuery({ query: GET_PROJECTS });
+      cache.writeQuery({
+        query: GET_CLIENTS,
+        data: { projects: projects.concat([addProject]) },
+      });
     },
   });
 
