@@ -3,6 +3,10 @@ import { useMutation } from '@apollo/client';
 import { GET_PROJECT } from '../queries/projectQueries';
 
 export default function EditProjectForm() {
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [clientId, setClientId] = useState('');
+  const [status, setStatus] = useState('new');
   return (
     <div className='mt-5'>
       <h3>Update Project Details</h3>
