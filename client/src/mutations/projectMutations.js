@@ -15,3 +15,5 @@ const ADD_PROJECT = `
       }
   }
 `;
+
+export { ADD_PROJECT };
