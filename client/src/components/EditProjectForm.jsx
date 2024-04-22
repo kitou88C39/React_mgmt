@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { GET_PROJECT } from '../queries/projectQueries';
+import { UPDATE_PROJECT } from '../mutations/projectMutations';
 
 export default function EditProjectForm({ project }) {
   const [name, setName] = useState(project.name);
   const [description, setDescription] = useState(project.description);
   const [status, setStatus] = useState('new');
+  const [uodateProject] = useMutation(UPDATE_PROJECT, {
+    variables: { id: project.id, name, description, status },
+  });
 
   const onSubmit = (e) => {
     e.preventDefault();
