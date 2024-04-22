@@ -10,7 +10,10 @@ export default function EditProjectForm({ project }) {
   const onSubmit = (e) => {
     e.preventDefault();
 
-
+    if (!name || !description || !status) {
+      return;
+    }
+  };
   return (
     <div className='mt-5'>
       <h3>Update Project Details</h3>
