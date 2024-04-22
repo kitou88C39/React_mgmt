@@ -4,8 +4,9 @@ import { DELETE_PROJECT } from 'mutations/projectMutations';
 import { GET_PROJECTS } from '../queries/projectQueries';
 import { useMutation } from '@apollo/client';
 
-export default function DeleteProjectButton() {
-  const navigate = useNavigate(DELETE_PROJECT, {
+export default function DeleteProjectButton({ projectId }) {
+  const navigate = useNavigate();
+  const [deleteProject] = useMutation(DELETE_PROJECT, {
     variables: { id: projectId },
   });
   return (
