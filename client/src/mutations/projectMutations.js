@@ -16,4 +16,12 @@ const ADD_PROJECT = `
   }
 `;
 
-export { ADD_PROJECT };
+const DELETE_PRPJECT = gql`
+  mutation DeleteProject($id: ID!) {
+    deleteProject(id: $id) {
+      id
+    }
+  }
+`;
+
+export { ADD_PROJECT, DELETE_PRPJECT };
