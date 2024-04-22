@@ -2,10 +2,9 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { GET_PROJECT } from '../queries/projectQueries';
 
-export default function EditProjectForm() {
+export default function EditProjectForm({ project }) {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [clientId, setClientId] = useState('');
   const [status, setStatus] = useState('new');
   return (
     <div className='mt-5'>
