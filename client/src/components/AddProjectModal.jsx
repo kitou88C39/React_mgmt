@@ -17,7 +17,7 @@ export default function AddClientModal() {
       const { projects } = cache.readQuery({ query: GET_PROJECTS });
       cache.writeQuery({
         query: GET_CLIENTS,
-        data: { projects: projects.concat([addProject]) },
+        data: { projects: [...projects, addProject] },
       });
     },
   });
@@ -31,6 +31,8 @@ export default function AddClientModal() {
     if (name === '' || description === '' || status === '') {
       return alert('Please fill in all fields');
     }
+
+    addProject(name, description, clientId, status);
 
     setName('');
     setDescription('');
