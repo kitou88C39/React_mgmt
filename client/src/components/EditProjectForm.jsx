@@ -7,11 +7,14 @@ export default function EditProjectForm({ project }) {
   const [description, setDescription] = useState(project.description);
   const [status, setStatus] = useState('new');
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+
   return (
     <div className='mt-5'>
       <h3>Update Project Details</h3>
-      <form>
-        {' '}
+      <form onSubmit={onSubmit}>
         <div className='mb-3'>
           <label className='form-label'>
             Name
@@ -48,11 +51,7 @@ export default function EditProjectForm({ project }) {
             <option value='completed'>Completed</option>
           </select>
         </div>
-        <button
-          type='submit'
-          data-bs-dismiss='modal'
-          className='btn btn-secondary'
-        >
+        <button type='submit' className='btn btn-primary'>
           Submit
         </button>
       </form>
