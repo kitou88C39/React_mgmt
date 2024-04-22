@@ -5,9 +5,12 @@ import { GET_PROJECTS } from '../queries/projectQueries';
 import { useMutation } from '@apollo/client';
 
 export default function DeleteProjectButton() {
+  const navigate = useNavigate(DELETE_PROJECT, {
+    variables: { id: projectId },
+  });
   return (
     <div className='d-flex mt-5 ms-auto'>
-      <button className='btn btn-danger m-2'>
+      <button className='btn btn-danger m-2' onClick={deleteProject}>
         <FaTrash className='icon' />
         Delete Project
       </button>
