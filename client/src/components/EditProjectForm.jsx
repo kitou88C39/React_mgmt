@@ -6,6 +6,45 @@ export default function EditProjectForm() {
   return (
     <div className='mt-5'>
       <h3>Update Project Details</h3>
+      <form>
+        {' '}
+        <div className='mb-3'>
+          <label className='form-label'>
+            Name
+            <input
+              type='name'
+              className='from-control'
+              id='name'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+        </div>
+        <div className='mb-3'>
+          <label className='form-label'>
+            Description
+            <textarea
+              className='from-control'
+              id='description'
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            ></textarea>
+          </label>
+        </div>
+        <div className='mb-3'>
+          <label className='form-label'>Stutas</label>
+          <select
+            id='status'
+            className='from-select'
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+          >
+            <option value='new'>Not Started</option>
+            <option value='progress'>In Progress</option>
+            <option value='completed'>Completed</option>
+          </select>
+        </div>
+      </form>
     </div>
   );
 }
