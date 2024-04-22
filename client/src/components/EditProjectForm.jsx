@@ -7,8 +7,9 @@ export default function EditProjectForm({ project }) {
   const [name, setName] = useState(project.name);
   const [description, setDescription] = useState(project.description);
   const [status, setStatus] = useState('new');
-  const [uodateProject] = useMutation(UPDATE_PROJECT, {
+  const [updateProject] = useMutation(UPDATE_PROJECT, {
     variables: { id: project.id, name, description, status },
+    refetchQueries: [{ query: GET_PROJECT, variables: { id: project.id } }],
   });
 
   const onSubmit = (e) => {
@@ -17,6 +18,7 @@ export default function EditProjectForm({ project }) {
     if (!name || !description || !status) {
       return alert('Please fill out all fields');
     }
+    updateProject(name, description, status);
   };
   return (
     <div className='mt-5'>
