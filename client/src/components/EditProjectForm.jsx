@@ -11,7 +11,7 @@ export default function EditProjectForm({ project }) {
     e.preventDefault();
 
     if (!name || !description || !status) {
-      return;
+      return alert('Please fill out all fields');
     }
   };
   return (
