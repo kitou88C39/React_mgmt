@@ -9,6 +9,7 @@ export default function EditProjectForm({ project }) {
   const [status, setStatus] = useState('new');
   const [uodateProject] = useMutation(UPDATE_PROJECT, {
     variables: { id: project.id, name, description, status },
+    refetchQueries: [{ query: GET_PROJECT, variables: { id: project.id } }],
   });
 
   const onSubmit = (e) => {
