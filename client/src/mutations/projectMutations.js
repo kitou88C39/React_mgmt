@@ -1,9 +1,7 @@
 import { gql } from '@apollo/client';
 
 const ADD_PROJECT = `
-  mutation AddProject($name: String!, $description: String!, $clientId: ID!) {
+  mutation AddProject($name: String!, $description: String!,$status: ProjectStatus!, $clientId: ID!) {
+    addProject(name: $name, description: $description, status: $status, clientId: $clientId){
+  }
 `;
-
-export default function projectMutations() {
-  return <div>projectMutations</div>;
-}
